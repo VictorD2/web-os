@@ -1,0 +1,56 @@
+{
+  "name": "lds",
+  "version": "1.0.0",
+  "description": "A general template for an Enact Typescript application.",
+  "author": "",
+  "main": "src/index.tsx",
+  "scripts": {
+    "serve": "enact serve",
+    "copy": "cp src/appinfo.json dist/appinfo.json && cp src/logo_lds.png dist/logo_lds.png && cp src/large_logo_lds.png dist/large_logo_lds.png",
+    "pack": "enact pack && npm run copy",
+    "pack-p": "enact pack -p && npm run copy && npm run build",
+    "watch": "enact pack --watch && npm run copy",
+    "build": "ares-package ./dist",
+    "clean": "enact clean",
+    "lint": "enact lint .",
+    "license": "enact license",
+    "test": "enact test",
+    "test-watch": "enact test --watch"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": "",
+  "enact": {
+    "theme": "sandstone"
+  },
+  "eslintConfig": {
+    "extends": "enact-proxy"
+  },
+  "eslintIgnore": [
+    "node_modules/*",
+    "build/*",
+    "dist/*"
+  ],
+  "dependencies": {
+    "@enact/core": "^4.8.0",
+    "@enact/i18n": "^4.8.0",
+    "@enact/sandstone": "^2.8.0",
+    "@enact/spotlight": "^4.8.0",
+    "@enact/ui": "^4.8.0",
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "hls.js": "^1.5.15",
+    "ilib": "^14.19.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.1",
+    "styled-components": "^6.1.13",
+    "typescript": "^5.3.3",
+    "web-vitals": "^3.5.1"
+  },
+  "devDependencies": {
+    "eslint-config-enact-proxy": "^1.0.7"
+  }
+}
